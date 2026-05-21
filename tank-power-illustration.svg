@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+  <title id="title">Aquarium backup power illustration</title>
+  <desc id="desc">A simple aquarium next to a portable power station.</desc>
+  <rect width="560" height="420" rx="8" fill="#eef5f2"/>
+  <rect x="60" y="82" width="300" height="224" rx="8" fill="#ffffff" stroke="#19201f" stroke-width="6"/>
+  <rect x="75" y="102" width="270" height="150" fill="#b8d9d4"/>
+  <path d="M75 134 C125 116 172 151 226 132 C268 118 307 125 345 111 L345 252 L75 252 Z" fill="#86c4bc" opacity=".85"/>
+  <rect x="96" y="260" width="226" height="22" rx="4" fill="#d9b66d"/>
+  <circle cx="154" cy="180" r="14" fill="#d9684b"/>
+  <path d="M168 180 L196 164 L196 196 Z" fill="#d9684b"/>
+  <circle cx="250" cy="166" r="10" fill="#e7a538"/>
+  <path d="M260 166 L284 152 L284 180 Z" fill="#e7a538"/>
+  <circle cx="120" cy="132" r="5" fill="#ffffff"/>
+  <circle cx="136" cy="116" r="4" fill="#ffffff"/>
+  <circle cx="285" cy="204" r="5" fill="#ffffff"/>
+  <rect x="396" y="172" width="104" height="134" rx="8" fill="#24302d"/>
+  <rect x="416" y="195" width="64" height="34" rx="4" fill="#d6ece8"/>
+  <circle cx="430" cy="258" r="12" fill="#1f7a62"/>
+  <rect x="456" y="248" width="24" height="20" rx="3" fill="#5ba9a6"/>
+  <path d="M362 272 C388 272 388 224 416 224" fill="none" stroke="#19201f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M108 333 H458" stroke="#c7d2cc" stroke-width="8" stroke-linecap="round"/>
+</svg>

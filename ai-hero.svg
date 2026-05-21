@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420" role="img" aria-labelledby="title desc">
+  <title id="title">Minimal AI tools interface</title>
+  <desc id="desc">A clean interface grid inspired by modern product design.</desc>
+  <rect width="560" height="420" rx="28" fill="#f5f5f7"/>
+  <rect x="70" y="58" width="420" height="304" rx="28" fill="#fff" stroke="#e8e8ed"/>
+  <rect x="104" y="92" width="210" height="22" rx="11" fill="#0b0b0f"/>
+  <rect x="104" y="132" width="352" height="46" rx="23" fill="#f5f5f7"/>
+  <circle cx="132" cy="155" r="10" fill="#0071e3"/>
+  <rect x="154" y="147" width="160" height="16" rx="8" fill="#d8d8df"/>
+  <g>
+    <rect x="104" y="208" width="96" height="86" rx="18" fill="#111"/>
+    <rect x="220" y="208" width="96" height="86" rx="18" fill="#0071e3"/>
+    <rect x="336" y="208" width="120" height="86" rx="18" fill="#e8e8ed"/>
+    <circle cx="136" cy="239" r="12" fill="#fff"/>
+    <circle cx="252" cy="239" r="12" fill="#fff"/>
+    <circle cx="374" cy="239" r="12" fill="#0071e3"/>
+    <rect x="124" y="266" width="52" height="8" rx="4" fill="#777"/>
+    <rect x="240" y="266" width="52" height="8" rx="4" fill="#bedaff"/>
+    <rect x="360" y="266" width="64" height="8" rx="4" fill="#c6c6cc"/>
+  </g>
+  <path d="M126 334h308" stroke="#e8e8ed" stroke-width="10" stroke-linecap="round"/>
+</svg>
