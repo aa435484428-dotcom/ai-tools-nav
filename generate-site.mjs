@@ -4,7 +4,8 @@ import path from "node:path";
 const root = process.cwd();
 const now = "May 21, 2026";
 const siteName = "AIFindr";
-const baseUrl = "https://your-domain.example";
+const baseUrl = "https://ai-tools-nav-zeta.vercel.app";
+const repoUrl = "https://github.com/aa435484428-dotcom/ai-tools-nav";
 
 const categories = [
   "Chat",
@@ -734,11 +735,11 @@ Clean AI tools navigation website with:
 
 After pushing this folder to a public GitHub repository, replace the repository URL below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYOUR_GITHUB_USERNAME%2Fai-tools-nav)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=${encodeURIComponent(repoUrl)})
 
 ## Before launch
 
-1. Replace \`${baseUrl}\` in \`generate-site.mjs\`, regenerate, and verify \`sitemap.xml\`.
+1. If you add a custom domain, replace \`${baseUrl}\` in \`generate-site.mjs\`, regenerate, and verify \`sitemap.xml\`.
 2. Replace contact placeholders in \`pages/about.html\`, \`pages/privacy.html\`, and \`pages/advertise.html\`.
 3. Add real ad code inside elements with class \`ad-slot\`.
 4. Re-check pricing and features on official tool pages before publishing reviews.
