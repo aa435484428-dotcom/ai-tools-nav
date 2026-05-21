@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AIFindr - AI Tools Directory</title>
+    <meta name="description" content="A clean AI tools navigation website with categories, search, middle ad placement, and SEO-friendly AI tool articles.">
+    <meta name="robots" content="index,follow">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="AIFindr home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AIFindr</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html#tools">Tools</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="articles/index.html">Articles</a>
+        <a href="pages/advertise.html">Advertise</a>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI tools directory</p>
+          <h1>Find the right AI tool with less noise.</h1>
+          <p class="lead">A clean, fast AI navigation site for chat, search, writing, image, video, audio, coding, automation, and productivity tools.</p>
+          <div class="hero-search" role="search">
+            <input id="toolSearch" type="search" placeholder="Search tools, categories, or use cases" aria-label="Search AI tools">
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="assets/ai-hero.svg" alt="Minimal AI tools interface illustration" width="560" height="420">
+        </figure>
+      </section>
+
+      <section id="categories" class="section compact">
+        <div class="section-heading centered">
+          <p class="eyebrow">Categories</p>
+          <h2>Browse by workflow.</h2>
+        </div>
+        <div class="filter-row" aria-label="Tool category filters"><button class="filter-button active" data-category-filter="All">All</button><button class="filter-button" data-category-filter="Chat">Chat</button><button class="filter-button" data-category-filter="Search">Search</button><button class="filter-button" data-category-filter="Writing">Writing</button><button class="filter-button" data-category-filter="Image">Image</button><button class="filter-button" data-category-filter="Video">Video</button><button class="filter-button" data-category-filter="Audio">Audio</button><button class="filter-button" data-category-filter="Coding">Coding</button><button class="filter-button" data-category-filter="Productivity">Productivity</button><button class="filter-button" data-category-filter="Automation">Automation</button><button class="filter-button" data-category-filter="Design">Design</button></div>
+      </section>
+
+      <section id="tools" class="section">
+        <div class="section-heading centered">
+          <p class="eyebrow">Directory</p>
+          <h2>Curated AI tools.</h2>
+          <p>Use the search box or category filters. The middle banner is reserved for ads or sponsorships.</p>
+        </div>
+        <div class="tool-grid" id="toolGrid">
+    <article class="tool-card" data-tool-card data-category="Chat" data-search="chatgpt chat general ai assistant for writing, research, analysis, brainstorming, and coding. best all-rounder">
+      <div class="tool-topline">
+        <span class="tool-icon">C</span>
+        <span class="pill">Chat</span>
+      </div>
+      <h3>ChatGPT</h3>
+      <p>General AI assistant for writing, research, analysis, brainstorming, and coding.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Best all-rounder</span>
+      </div>
+      <a class="card-link" href="https://chatgpt.com/" target="_blank" rel="nofollow sponsored noopener">Visit ChatGPT</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Chat" data-search="claude chat long-form reasoning assistant for analysis, documents, writing, and coding help. long context">
+      <div class="tool-topline">
+        <span class="tool-icon">C</span>
+        <span class="pill">Chat</span>
+      </div>
+      <h3>Claude</h3>
+      <p>Long-form reasoning assistant for analysis, documents, writing, and coding help.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Long context</span>
+      </div>
+      <a class="card-link" href="https://claude.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Claude</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Chat" data-search="gemini chat google ai assistant connected to search and google ecosystem workflows. google users">
+      <div class="tool-topline">
+        <span class="tool-icon">G</span>
+        <span class="pill">Chat</span>
+      </div>
+      <h3>Gemini</h3>
+      <p>Google AI assistant connected to Search and Google ecosystem workflows.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Google users</span>
+      </div>
+      <a class="card-link" href="https://gemini.google.com/" target="_blank" rel="nofollow sponsored noopener">Visit Gemini</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Search" data-search="perplexity search answer engine for research, current web questions, and cited discovery. research">
+      <div class="tool-topline">
+        <span class="tool-icon">P</span>
+        <span class="pill">Search</span>
+      </div>
+      <h3>Perplexity</h3>
+      <p>Answer engine for research, current web questions, and cited discovery.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Research</span>
+      </div>
+      <a class="card-link" href="https://www.perplexity.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Perplexity</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Productivity" data-search="microsoft copilot productivity ai assistant across microsoft 365, edge, windows, and work documents. office workflows">
+      <div class="tool-topline">
+        <span class="tool-icon">M</span>
+        <span class="pill">Productivity</span>
+      </div>
+      <h3>Microsoft Copilot</h3>
+      <p>AI assistant across Microsoft 365, Edge, Windows, and work documents.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Office workflows</span>
+      </div>
+      <a class="card-link" href="https://copilot.microsoft.com/" target="_blank" rel="nofollow sponsored noopener">Visit Microsoft Copilot</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Chat" data-search="poe chat multi-model chat hub for testing different assistants in one interface. model switching">
+      <div class="tool-topline">
+        <span class="tool-icon">P</span>
+        <span class="pill">Chat</span>
+      </div>
+      <h3>Poe</h3>
+      <p>Multi-model chat hub for testing different assistants in one interface.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Model switching</span>
+      </div>
+      <a class="card-link" href="https://poe.com/" target="_blank" rel="nofollow sponsored noopener">Visit Poe</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Productivity" data-search="notion ai productivity ai writing, summarizing, and workspace assistance inside notion. teams">
+      <div class="tool-topline">
+        <span class="tool-icon">N</span>
+        <span class="pill">Productivity</span>
+      </div>
+      <h3>Notion AI</h3>
+      <p>AI writing, summarizing, and workspace assistance inside Notion.</p>
+      <div class="tool-meta">
+        <span>Paid add-on</span>
+        <span>Teams</span>
+      </div>
+      <a class="card-link" href="https://www.notion.com/product/ai" target="_blank" rel="nofollow sponsored noopener">Visit Notion AI</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Writing" data-search="grammarly writing writing assistant for grammar, tone, clarity, and business communication. polishing">
+      <div class="tool-topline">
+        <span class="tool-icon">G</span>
+        <span class="pill">Writing</span>
+      </div>
+      <h3>Grammarly</h3>
+      <p>Writing assistant for grammar, tone, clarity, and business communication.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Polishing</span>
+      </div>
+      <a class="card-link" href="https://www.grammarly.com/" target="_blank" rel="nofollow sponsored noopener">Visit Grammarly</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Writing" data-search="jasper writing marketing-focused ai writing platform for campaigns, brand voice, and content teams. marketing">
+      <div class="tool-topline">
+        <span class="tool-icon">J</span>
+        <span class="pill">Writing</span>
+      </div>
+      <h3>Jasper</h3>
+      <p>Marketing-focused AI writing platform for campaigns, brand voice, and content teams.</p>
+      <div class="tool-meta">
+        <span>Paid</span>
+        <span>Marketing</span>
+      </div>
+      <a class="card-link" href="https://www.jasper.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Jasper</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Writing" data-search="copy.ai writing go-to-market ai platform for sales copy, workflows, and content operations. sales copy">
+      <div class="tool-topline">
+        <span class="tool-icon">C</span>
+        <span class="pill">Writing</span>
+      </div>
+      <h3>Copy.ai</h3>
+      <p>Go-to-market AI platform for sales copy, workflows, and content operations.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Sales copy</span>
+      </div>
+      <a class="card-link" href="https://www.copy.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Copy.ai</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Image" data-search="midjourney image image and video model platform known for polished creative visuals. art quality">
+      <div class="tool-topline">
+        <span class="tool-icon">M</span>
+        <span class="pill">Image</span>
+      </div>
+      <h3>Midjourney</h3>
+      <p>Image and video model platform known for polished creative visuals.</p>
+      <div class="tool-meta">
+        <span>Paid</span>
+        <span>Art quality</span>
+      </div>
+      <a class="card-link" href="https://www.midjourney.com/" target="_blank" rel="nofollow sponsored noopener">Visit Midjourney</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Image" data-search="adobe firefly image commercially oriented generative image tools within adobe creative workflows. design teams">
+      <div class="tool-topline">
+        <span class="tool-icon">A</span>
+        <span class="pill">Image</span>
+      </div>
+      <h3>Adobe Firefly</h3>
+      <p>Commercially oriented generative image tools within Adobe creative workflows.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Design teams</span>
+      </div>
+      <a class="card-link" href="https://www.adobe.com/products/firefly.html" target="_blank" rel="nofollow sponsored noopener">Visit Adobe Firefly</a>
+    </article>
+    
+    <aside class="ad-slot ad-slot-wide" aria-label="Advertisement placement">
+      <span>Advertisement</span>
+      <strong>970 x 250 sponsor slot</strong>
+      <p>Place AdSense, affiliate banner, or direct sponsor creative here.</p>
+    </aside>
+  
+  
+    <article class="tool-card" data-tool-card data-category="Design" data-search="canva ai design design suite with ai writing, image, layout, presentation, and brand tools. fast design">
+      <div class="tool-topline">
+        <span class="tool-icon">C</span>
+        <span class="pill">Design</span>
+      </div>
+      <h3>Canva AI</h3>
+      <p>Design suite with AI writing, image, layout, presentation, and brand tools.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Fast design</span>
+      </div>
+      <a class="card-link" href="https://www.canva.com/ai/" target="_blank" rel="nofollow sponsored noopener">Visit Canva AI</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Image" data-search="ideogram image ai image generator often used for text-in-image and graphic concepts. text graphics">
+      <div class="tool-topline">
+        <span class="tool-icon">I</span>
+        <span class="pill">Image</span>
+      </div>
+      <h3>Ideogram</h3>
+      <p>AI image generator often used for text-in-image and graphic concepts.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Text graphics</span>
+      </div>
+      <a class="card-link" href="https://ideogram.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Ideogram</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Video" data-search="runway video ai video generation and editing suite for creators, ads, and motion experiments. video generation">
+      <div class="tool-topline">
+        <span class="tool-icon">R</span>
+        <span class="pill">Video</span>
+      </div>
+      <h3>Runway</h3>
+      <p>AI video generation and editing suite for creators, ads, and motion experiments.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Video generation</span>
+      </div>
+      <a class="card-link" href="https://runwayml.com/" target="_blank" rel="nofollow sponsored noopener">Visit Runway</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Video" data-search="pika video ai video creation tool for short clips, social assets, and visual experiments. short video">
+      <div class="tool-topline">
+        <span class="tool-icon">P</span>
+        <span class="pill">Video</span>
+      </div>
+      <h3>Pika</h3>
+      <p>AI video creation tool for short clips, social assets, and visual experiments.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Short video</span>
+      </div>
+      <a class="card-link" href="https://pika.art/" target="_blank" rel="nofollow sponsored noopener">Visit Pika</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Video" data-search="heygen video ai avatar and video localization platform for marketing and training videos. avatars">
+      <div class="tool-topline">
+        <span class="tool-icon">H</span>
+        <span class="pill">Video</span>
+      </div>
+      <h3>HeyGen</h3>
+      <p>AI avatar and video localization platform for marketing and training videos.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Avatars</span>
+      </div>
+      <a class="card-link" href="https://www.heygen.com/" target="_blank" rel="nofollow sponsored noopener">Visit HeyGen</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Audio" data-search="elevenlabs audio ai voice platform for text-to-speech, dubbing, voice design, and audio apps. voice">
+      <div class="tool-topline">
+        <span class="tool-icon">E</span>
+        <span class="pill">Audio</span>
+      </div>
+      <h3>ElevenLabs</h3>
+      <p>AI voice platform for text-to-speech, dubbing, voice design, and audio apps.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Voice</span>
+      </div>
+      <a class="card-link" href="https://elevenlabs.io/" target="_blank" rel="nofollow sponsored noopener">Visit ElevenLabs</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Audio" data-search="descript audio audio and video editor with transcription, overdub, captions, and podcast tools. podcasts">
+      <div class="tool-topline">
+        <span class="tool-icon">D</span>
+        <span class="pill">Audio</span>
+      </div>
+      <h3>Descript</h3>
+      <p>Audio and video editor with transcription, overdub, captions, and podcast tools.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Podcasts</span>
+      </div>
+      <a class="card-link" href="https://www.descript.com/" target="_blank" rel="nofollow sponsored noopener">Visit Descript</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Audio" data-search="suno audio ai music creation platform for songs, demos, and creative audio experiments. music">
+      <div class="tool-topline">
+        <span class="tool-icon">S</span>
+        <span class="pill">Audio</span>
+      </div>
+      <h3>Suno</h3>
+      <p>AI music creation platform for songs, demos, and creative audio experiments.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Music</span>
+      </div>
+      <a class="card-link" href="https://suno.com/" target="_blank" rel="nofollow sponsored noopener">Visit Suno</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="cursor coding ai code editor built for codebase-aware edits, chat, and agent workflows. developers">
+      <div class="tool-topline">
+        <span class="tool-icon">C</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>Cursor</h3>
+      <p>AI code editor built for codebase-aware edits, chat, and agent workflows.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Developers</span>
+      </div>
+      <a class="card-link" href="https://www.cursor.com/" target="_blank" rel="nofollow sponsored noopener">Visit Cursor</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="github copilot coding ai coding assistant integrated into editors and github developer workflows. code completion">
+      <div class="tool-topline">
+        <span class="tool-icon">G</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>GitHub Copilot</h3>
+      <p>AI coding assistant integrated into editors and GitHub developer workflows.</p>
+      <div class="tool-meta">
+        <span>Paid</span>
+        <span>Code completion</span>
+      </div>
+      <a class="card-link" href="https://github.com/features/copilot" target="_blank" rel="nofollow sponsored noopener">Visit GitHub Copilot</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="replit coding online coding workspace with ai assistance for prototyping and app building. prototyping">
+      <div class="tool-topline">
+        <span class="tool-icon">R</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>Replit</h3>
+      <p>Online coding workspace with AI assistance for prototyping and app building.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Prototyping</span>
+      </div>
+      <a class="card-link" href="https://replit.com/" target="_blank" rel="nofollow sponsored noopener">Visit Replit</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="lovable coding ai app builder for turning prompts into web app prototypes. no-code apps">
+      <div class="tool-topline">
+        <span class="tool-icon">L</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>Lovable</h3>
+      <p>AI app builder for turning prompts into web app prototypes.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>No-code apps</span>
+      </div>
+      <a class="card-link" href="https://lovable.dev/" target="_blank" rel="nofollow sponsored noopener">Visit Lovable</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Automation" data-search="zapier ai automation ai automation across apps, agents, interfaces, and business workflows. automations">
+      <div class="tool-topline">
+        <span class="tool-icon">Z</span>
+        <span class="pill">Automation</span>
+      </div>
+      <h3>Zapier AI</h3>
+      <p>AI automation across apps, agents, interfaces, and business workflows.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Automations</span>
+      </div>
+      <a class="card-link" href="https://zapier.com/ai" target="_blank" rel="nofollow sponsored noopener">Visit Zapier AI</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Automation" data-search="make automation visual automation platform for connecting apps and ai workflow steps. visual flows">
+      <div class="tool-topline">
+        <span class="tool-icon">M</span>
+        <span class="pill">Automation</span>
+      </div>
+      <h3>Make</h3>
+      <p>Visual automation platform for connecting apps and AI workflow steps.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Visual flows</span>
+      </div>
+      <a class="card-link" href="https://www.make.com/en/ai-automation" target="_blank" rel="nofollow sponsored noopener">Visit Make</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Design" data-search="gamma design ai presentation and document tool for decks, memos, and polished pages. presentations">
+      <div class="tool-topline">
+        <span class="tool-icon">G</span>
+        <span class="pill">Design</span>
+      </div>
+      <h3>Gamma</h3>
+      <p>AI presentation and document tool for decks, memos, and polished pages.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Presentations</span>
+      </div>
+      <a class="card-link" href="https://gamma.app/" target="_blank" rel="nofollow sponsored noopener">Visit Gamma</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Design" data-search="beautiful.ai design presentation design platform with smart layout and brand controls. pitch decks">
+      <div class="tool-topline">
+        <span class="tool-icon">B</span>
+        <span class="pill">Design</span>
+      </div>
+      <h3>Beautiful.ai</h3>
+      <p>Presentation design platform with smart layout and brand controls.</p>
+      <div class="tool-meta">
+        <span>Paid</span>
+        <span>Pitch decks</span>
+      </div>
+      <a class="card-link" href="https://www.beautiful.ai/" target="_blank" rel="nofollow sponsored noopener">Visit Beautiful.ai</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="hugging face coding ai model hub and developer platform for open models, datasets, and demos. open models">
+      <div class="tool-topline">
+        <span class="tool-icon">H</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>Hugging Face</h3>
+      <p>AI model hub and developer platform for open models, datasets, and demos.</p>
+      <div class="tool-meta">
+        <span>Freemium</span>
+        <span>Open models</span>
+      </div>
+      <a class="card-link" href="https://huggingface.co/" target="_blank" rel="nofollow sponsored noopener">Visit Hugging Face</a>
+    </article>
+    
+  
+    <article class="tool-card" data-tool-card data-category="Coding" data-search="replicate coding cloud api platform for running open-source ai models in products. model apis">
+      <div class="tool-topline">
+        <span class="tool-icon">R</span>
+        <span class="pill">Coding</span>
+      </div>
+      <h3>Replicate</h3>
+      <p>Cloud API platform for running open-source AI models in products.</p>
+      <div class="tool-meta">
+        <span>Usage-based</span>
+        <span>Model APIs</span>
+      </div>
+      <a class="card-link" href="https://replicate.com/" target="_blank" rel="nofollow sponsored noopener">Visit Replicate</a>
+    </article>
+    
+  </div>
+      </section>
+
+      <section class="section soft">
+        <div class="section-heading centered">
+          <p class="eyebrow">SEO content</p>
+          <h2>AI tool guides.</h2>
+          <p>100 SEO article pages are generated for long-tail AI tool keywords.</p>
+        </div>
+        <div class="article-grid">
+      <article class="article-card">
+        <span>Business</span>
+        <h3><a href="articles/best-ai-tools-for-small-business-in-2026-a-practical-stack.html">Best AI Tools for Small Business in 2026: A Practical Stack</a></h3>
+        <p>best AI tools for small business 2026</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Education</span>
+        <h3><a href="articles/best-free-ai-tools-for-students-study-faster-without-extra-apps.html">Best Free AI Tools for Students: Study Faster Without Extra Apps</a></h3>
+        <p>best free AI tools for students</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Writing</span>
+        <h3><a href="articles/best-ai-writing-tools-for-blog-posts-seo-friendly-options.html">Best AI Writing Tools for Blog Posts: SEO-Friendly Options</a></h3>
+        <p>best AI writing tools for blog posts</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Creator</span>
+        <h3><a href="articles/ai-tools-for-youtube-creators-scripts-thumbnails-voice-and-clips.html">AI Tools for YouTube Creators: Scripts, Thumbnails, Voice, and Clips</a></h3>
+        <p>AI tools for YouTube creators</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Creator</span>
+        <h3><a href="articles/ai-tools-for-tiktok-content-creators-short-video-workflow.html">AI Tools for TikTok Content Creators: Short Video Workflow</a></h3>
+        <p>AI tools for TikTok content creators</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Business</span>
+        <h3><a href="articles/best-ai-tools-for-real-estate-agents-listings-leads-and-follow-up.html">Best AI Tools for Real Estate Agents: Listings, Leads, and Follow-Up</a></h3>
+        <p>best AI tools for real estate agents</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Professional</span>
+        <h3><a href="articles/ai-tools-for-lawyers-research-drafting-and-document-review.html">AI Tools for Lawyers: Research, Drafting, and Document Review</a></h3>
+        <p>AI tools for lawyers</p>
+      </article>
+    
+      <article class="article-card">
+        <span>Professional</span>
+        <h3><a href="articles/ai-tools-for-accountants-reporting-cleanup-and-client-communication.html">AI Tools for Accountants: Reporting, Cleanup, and Client Communication</a></h3>
+        <p>AI tools for accountants</p>
+      </article>
+    </div>
+        <div class="center-action"><a class="button dark" href="articles/index.html">View all articles</a></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  
+    <footer class="site-footer">
+      <p>AIFindr is an independent AI tools directory. Tool details can change; verify pricing and features on the official site before buying.</p>
+      <nav aria-label="Footer navigation">
+        <a href="pages/about.html">About</a>
+        <a href="pages/privacy.html">Privacy</a>
+        <a href="pages/disclosure.html">Disclosure</a>
+      </nav>
+    </footer>
+  </body>
+</html>
