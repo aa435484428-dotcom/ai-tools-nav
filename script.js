@@ -7,6 +7,10 @@ const carouselTrack = document.querySelector("[data-carousel-track]");
 const carouselDots = Array.from(document.querySelectorAll("[data-carousel-dot]"));
 const carouselPrev = document.querySelector("[data-carousel-prev]");
 const carouselNext = document.querySelector("[data-carousel-next]");
+const heroCarouselTrack = document.querySelector("[data-hero-carousel-track]");
+const heroCarouselDots = Array.from(document.querySelectorAll("[data-hero-carousel-dot]"));
+const heroCarouselPrev = document.querySelector("[data-hero-carousel-prev]");
+const heroCarouselNext = document.querySelector("[data-hero-carousel-next]");
 let activeCategory = "All";
 
 function updateTools() {
@@ -51,9 +55,29 @@ function updateCarouselDots() {
   carouselDots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === index));
 }
 
+function getSlideDistance(track, selector) {
+  const slide = track?.querySelector(selector);
+  return slide ? slide.getBoundingClientRect().width + 18 : 220;
+}
+
+function scrollHeroCarousel(direction) {
+  if (!heroCarouselTrack) return;
+  heroCarouselTrack.scrollBy({ left: direction * getSlideDistance(heroCarouselTrack, ".hero-destination-card"), behavior: "smooth" });
+}
+
+function updateHeroCarouselDots() {
+  if (!heroCarouselTrack || !heroCarouselDots.length) return;
+  const width = getSlideDistance(heroCarouselTrack, ".hero-destination-card");
+  const index = Math.round(heroCarouselTrack.scrollLeft / width);
+  heroCarouselDots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === index));
+}
+
 carouselPrev?.addEventListener("click", () => scrollCarousel(-1));
 carouselNext?.addEventListener("click", () => scrollCarousel(1));
 carouselTrack?.addEventListener("scroll", updateCarouselDots, { passive: true });
+heroCarouselPrev?.addEventListener("click", () => scrollHeroCarousel(-1));
+heroCarouselNext?.addEventListener("click", () => scrollHeroCarousel(1));
+heroCarouselTrack?.addEventListener("scroll", updateHeroCarouselDots, { passive: true });
 carouselDots.forEach((dot) => {
   dot.addEventListener("click", () => {
     if (!carouselTrack) return;
@@ -62,6 +86,24 @@ carouselDots.forEach((dot) => {
     carouselTrack.scrollTo({ left: Number(dot.dataset.carouselDot) * width, behavior: "smooth" });
   });
 });
+heroCarouselDots.forEach((dot) => {
+  dot.addEventListener("click", () => {
+    if (!heroCarouselTrack) return;
+    heroCarouselTrack.scrollTo({ left: Number(dot.dataset.heroCarouselDot) * getSlideDistance(heroCarouselTrack, ".hero-destination-card"), behavior: "smooth" });
+  });
+});
+setInterval(() => {
+  if (document.hidden) return;
+  if (heroCarouselTrack) {
+    const atEnd = heroCarouselTrack.scrollLeft + heroCarouselTrack.clientWidth >= heroCarouselTrack.scrollWidth - 8;
+    heroCarouselTrack.scrollTo({ left: atEnd ? 0 : heroCarouselTrack.scrollLeft + getSlideDistance(heroCarouselTrack, ".hero-destination-card"), behavior: "smooth" });
+  }
+  if (carouselTrack) {
+    const atEnd = carouselTrack.scrollLeft + carouselTrack.clientWidth >= carouselTrack.scrollWidth - 8;
+    carouselTrack.scrollTo({ left: atEnd ? 0 : carouselTrack.scrollLeft + getSlideDistance(carouselTrack, ".carousel-slide"), behavior: "smooth" });
+  }
+}, 4200);
 updateTools();
 updateArticles();
 updateCarouselDots();
+updateHeroCarouselDots();

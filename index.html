@@ -6,7 +6,7 @@
     <title>AIFindr - AI Tools Directory</title>
     <meta name="description" content="A clean AI tools navigation website with categories, search, middle ad placement, and SEO-friendly AI tool articles.">
     <meta name="robots" content="index,follow">
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -53,7 +53,7 @@
         </div>
         <div class="hero-copy">
           <p class="eyebrow">AIFindr · Global AI Directory</p>
-          <h1>AI TOOLS<br>DISCOVERY</h1>
+          <h1><span class="title-line">AI TOOLS</span><span class="title-line">DISCOVERY</span></h1>
           <p class="lead">Navigate the best AI tools for chat, search, writing, images, video, audio, coding, automation, and productivity.</p>
           <div class="hero-command">
             <a class="hero-dot" href="#tools" aria-label="Explore AI tools"></a>
@@ -63,12 +63,12 @@
             <input id="toolSearch" type="search" placeholder="Search tools, categories, or use cases" aria-label="Search AI tools">
           </div>
         </div>
-        <div class="hero-destinations" aria-label="Featured AI tool destinations">
-          
+        <div class="hero-carousel" aria-label="Featured AI tool destinations">
+          <button class="hero-carousel-button" type="button" data-hero-carousel-prev aria-label="Previous featured tool">‹</button>
+          <div class="hero-destinations" data-hero-carousel-track>
+            
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=chatgpt.com&amp;sz=64" alt="ChatGPT logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-01.svg" alt="ChatGPT workflow image" loading="eager">
       <span>Chat</span>
       <strong>ChatGPT</strong>
       <p>All-round AI assistant</p>
@@ -76,9 +76,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&amp;sz=64" alt="Perplexity logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-02.svg" alt="Perplexity workflow image" loading="eager">
       <span>Search</span>
       <strong>Perplexity</strong>
       <p>Research with sources</p>
@@ -86,9 +84,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=midjourney.com&amp;sz=64" alt="Midjourney logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-03.svg" alt="Midjourney workflow image" loading="eager">
       <span>Image</span>
       <strong>Midjourney</strong>
       <p>Creative visual generation</p>
@@ -96,9 +92,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=runwayml.com&amp;sz=64" alt="Runway logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-04.svg" alt="Runway workflow image" loading="lazy">
       <span>Video</span>
       <strong>Runway</strong>
       <p>AI video production</p>
@@ -106,9 +100,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=elevenlabs.io&amp;sz=64" alt="ElevenLabs logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-05.svg" alt="ElevenLabs workflow image" loading="lazy">
       <span>Audio</span>
       <strong>ElevenLabs</strong>
       <p>Voice and dubbing</p>
@@ -116,9 +108,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=cursor.com&amp;sz=64" alt="Cursor logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-06.svg" alt="Cursor workflow image" loading="lazy">
       <span>Coding</span>
       <strong>Cursor</strong>
       <p>AI code editor</p>
@@ -126,9 +116,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=notion.com&amp;sz=64" alt="Notion AI logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-07.svg" alt="Notion AI workflow image" loading="lazy">
       <span>Productivity</span>
       <strong>Notion AI</strong>
       <p>Workspace assistant</p>
@@ -136,9 +124,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=zapier.com&amp;sz=64" alt="Zapier AI logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-08.svg" alt="Zapier AI workflow image" loading="lazy">
       <span>Automation</span>
       <strong>Zapier AI</strong>
       <p>Workflow agents</p>
@@ -146,9 +132,7 @@
     </a>
   
     <a class="hero-destination-card" href="#tools">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=canva.com&amp;sz=64" alt="Canva AI logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-09.svg" alt="Canva AI workflow image" loading="lazy">
       <span>Design</span>
       <strong>Canva AI</strong>
       <p>Fast design creation</p>
@@ -156,15 +140,18 @@
     </a>
   
     <a class="hero-destination-card" href="articles/index.html">
-      <div class="hero-card-media">
-        <img src="https://www.google.com/s2/favicons?domain=ai-tools-nav-zeta.vercel.app&amp;sz=64" alt="AI Guides logo" loading="lazy">
-      </div>
+      <img class="hero-card-image" src="assets/hero-slides/slide-10.svg" alt="AI Guides workflow image" loading="lazy">
       <span>SEO</span>
       <strong>AI Guides</strong>
       <p>100 keyword articles</p>
       <i>10</i>
     </a>
   
+          </div>
+          <button class="hero-carousel-button" type="button" data-hero-carousel-next aria-label="Next featured tool">›</button>
+          <div class="hero-carousel-dots">
+            <button type="button" data-hero-carousel-dot="0" aria-label="Show featured tool 1"></button><button type="button" data-hero-carousel-dot="1" aria-label="Show featured tool 2"></button><button type="button" data-hero-carousel-dot="2" aria-label="Show featured tool 3"></button><button type="button" data-hero-carousel-dot="3" aria-label="Show featured tool 4"></button><button type="button" data-hero-carousel-dot="4" aria-label="Show featured tool 5"></button><button type="button" data-hero-carousel-dot="5" aria-label="Show featured tool 6"></button><button type="button" data-hero-carousel-dot="6" aria-label="Show featured tool 7"></button><button type="button" data-hero-carousel-dot="7" aria-label="Show featured tool 8"></button><button type="button" data-hero-carousel-dot="8" aria-label="Show featured tool 9"></button><button type="button" data-hero-carousel-dot="9" aria-label="Show featured tool 10"></button>
+          </div>
         </div>
         <div class="hero-progress" aria-hidden="true">
           <span></span>
@@ -180,6 +167,19 @@
         <div class="category-grid">
     <article class="category-tile">
       
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#0071e3;--wi-soft:#e9f3ff;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">CH</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Chat</div>
+    </div>
+  
+      
     <div class="category-visual" aria-hidden="true">
       <span>C</span>
       <i></i>
@@ -190,6 +190,19 @@
     </article>
   
     <article class="category-tile">
+      
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#36a269;--wi-soft:#e9f8f0;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">SE</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Search</div>
+    </div>
+  
       
     <div class="category-visual" aria-hidden="true">
       <span>S</span>
@@ -202,6 +215,19 @@
   
     <article class="category-tile">
       
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#9b72f2;--wi-soft:#f1eaff;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">WR</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Writing</div>
+    </div>
+  
+      
     <div class="category-visual" aria-hidden="true">
       <span>W</span>
       <i></i>
@@ -212,6 +238,19 @@
     </article>
   
     <article class="category-tile">
+      
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#ff7a59;--wi-soft:#ffede7;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">IM</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Image</div>
+    </div>
+  
       
     <div class="category-visual" aria-hidden="true">
       <span>I</span>
@@ -224,6 +263,19 @@
   
     <article class="category-tile">
       
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#ff375f;--wi-soft:#ffe8ee;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">VI</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Video</div>
+    </div>
+  
+      
     <div class="category-visual" aria-hidden="true">
       <span>V</span>
       <i></i>
@@ -234,6 +286,19 @@
     </article>
   
     <article class="category-tile">
+      
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#30b0c7;--wi-soft:#e4f8fb;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">AU</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Audio</div>
+    </div>
+  
       
     <div class="category-visual" aria-hidden="true">
       <span>A</span>
@@ -246,6 +311,19 @@
   
     <article class="category-tile">
       
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#5856d6;--wi-soft:#ecebff;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">CO</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Coding</div>
+    </div>
+  
+      
     <div class="category-visual" aria-hidden="true">
       <span>&lt;/&gt;</span>
       <i></i>
@@ -256,6 +334,19 @@
     </article>
   
     <article class="category-tile">
+      
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#007aff;--wi-soft:#e8f2ff;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">PR</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Productivity</div>
+    </div>
+  
       
     <div class="category-visual" aria-hidden="true">
       <span>P</span>
@@ -268,6 +359,19 @@
   
     <article class="category-tile">
       
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#ff9f0a;--wi-soft:#fff3df;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">AU</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Automation</div>
+    </div>
+  
+      
     <div class="category-visual" aria-hidden="true">
       <span>Z</span>
       <i></i>
@@ -278,6 +382,19 @@
     </article>
   
     <article class="category-tile">
+      
+    <div class="workflow-image" aria-hidden="true" style="--wi-accent:#bf5af2;--wi-soft:#f7e8ff;--wi-dark:#0b0b0f;">
+      <div class="workflow-screen">
+        <div class="workflow-line strong"></div>
+        <div class="workflow-line"></div>
+        <div class="workflow-line short"></div>
+      </div>
+      <div class="workflow-mark">DE</div>
+      <div class="workflow-chip one"></div>
+      <div class="workflow-chip two"></div>
+      <div class="workflow-caption">Design</div>
+    </div>
+  
       
     <div class="category-visual" aria-hidden="true">
       <span>D</span>
@@ -308,15 +425,16 @@
               <p>Compare chat, search, and source-aware tools.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Search visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#e9f8f0"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
-      <rect x="50" y="92" width="52" height="8" rx="4" fill="#0071e3"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#0071e3"/>
+      <rect x="50" y="92" width="52" height="8" rx="4" fill="#36a269"/>
+      <circle cx="232" cy="56" r="27" fill="#36a269"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
-      <text x="50" y="142" font-size="34" font-weight="800" fill="#0071e3" font-family="Arial, sans-serif">SE</text>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
+      <text x="50" y="142" font-size="34" font-weight="800" fill="#36a269" font-family="Arial, sans-serif">SE</text>
     </svg>
   
             </a>
@@ -327,14 +445,15 @@
               <p>Draft blogs, emails, newsletters, and landing pages.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Writing visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#f1eaff"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#9b72f2"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#9b72f2"/>
+      <circle cx="232" cy="56" r="27" fill="#9b72f2"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#9b72f2" font-family="Arial, sans-serif">WR</text>
     </svg>
   
@@ -346,14 +465,15 @@
               <p>Find visual tools for mockups, product shots, and concepts.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Image visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#ffede7"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#ff7a59"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#ff7a59"/>
+      <circle cx="232" cy="56" r="27" fill="#ff7a59"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#ff7a59" font-family="Arial, sans-serif">IM</text>
     </svg>
   
@@ -365,14 +485,15 @@
               <p>Short clips, avatars, ads, demos, and localization.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Video visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#ffe8ee"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#ff375f"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#ff375f"/>
+      <circle cx="232" cy="56" r="27" fill="#ff375f"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#ff375f" font-family="Arial, sans-serif">VI</text>
     </svg>
   
@@ -384,14 +505,15 @@
               <p>Narration, music, transcription, and podcast cleanup.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Audio visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#e4f8fb"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#30b0c7"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#30b0c7"/>
+      <circle cx="232" cy="56" r="27" fill="#30b0c7"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#30b0c7" font-family="Arial, sans-serif">AU</text>
     </svg>
   
@@ -403,14 +525,15 @@
               <p>Editors, copilots, APIs, and app builders.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Coding visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#ecebff"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#5856d6"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#5856d6"/>
+      <circle cx="232" cy="56" r="27" fill="#5856d6"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#5856d6" font-family="Arial, sans-serif">CO</text>
     </svg>
   
@@ -422,14 +545,15 @@
               <p>Connect apps and remove repeat business tasks.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Automation visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#fff3df"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#ff9f0a"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#ff9f0a"/>
+      <circle cx="232" cy="56" r="27" fill="#ff9f0a"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#ff9f0a" font-family="Arial, sans-serif">AU</text>
     </svg>
   
@@ -441,14 +565,15 @@
               <p>Meetings, notes, summaries, and follow-up workflows.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Productivity visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#e8f2ff"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#007aff"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#007aff"/>
+      <circle cx="232" cy="56" r="27" fill="#007aff"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#007aff" font-family="Arial, sans-serif">PR</text>
     </svg>
   
@@ -460,14 +585,15 @@
               <p>Slides, brand kits, layouts, and visual direction.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Design visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#f7e8ff"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
       <rect x="50" y="92" width="52" height="8" rx="4" fill="#bf5af2"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#bf5af2"/>
+      <circle cx="232" cy="56" r="27" fill="#bf5af2"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
       <text x="50" y="142" font-size="34" font-weight="800" fill="#bf5af2" font-family="Arial, sans-serif">DE</text>
     </svg>
   
@@ -479,15 +605,16 @@
               <p>Browse 100 AI tool keyword articles.</p>
               
     <svg class="slide-art" viewBox="0 0 360 170" role="img" aria-label="Articles visual">
-      <rect width="360" height="170" rx="28" fill="#f7f7f9"/>
-      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff"/>
+      <rect width="360" height="170" rx="28" fill="#e9f3ff"/>
+      <rect x="28" y="28" width="146" height="82" rx="22" fill="#fff" opacity=".92"/>
       <rect x="50" y="48" width="72" height="10" rx="5" fill="#0b0b0f"/>
       <rect x="50" y="72" width="92" height="8" rx="4" fill="#c9cad1"/>
-      <rect x="50" y="92" width="52" height="8" rx="4" fill="#34a853"/>
-      <rect x="206" y="30" width="52" height="52" rx="18" fill="#34a853"/>
+      <rect x="50" y="92" width="52" height="8" rx="4" fill="#0071e3"/>
+      <circle cx="232" cy="56" r="27" fill="#0071e3"/>
       <rect x="272" y="30" width="52" height="52" rx="18" fill="#0b0b0f"/>
-      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff"/>
-      <text x="50" y="142" font-size="34" font-weight="800" fill="#34a853" font-family="Arial, sans-serif">AR</text>
+      <rect x="206" y="102" width="118" height="34" rx="17" fill="#fff" opacity=".92"/>
+      <rect x="222" y="115" width="72" height="8" rx="4" fill="#c9cad1"/>
+      <text x="50" y="142" font-size="34" font-weight="800" fill="#0071e3" font-family="Arial, sans-serif">AR</text>
     </svg>
   
             </a>
@@ -1334,128 +1461,56 @@
         </div>
         <div class="article-grid">
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>BU</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/best-ai-tools-for-small-business-in-2026-a-practical-stack.svg" alt="Business AI tools guide image" loading="lazy">
         <span>Business</span>
         <h3><a href="articles/best-ai-tools-for-small-business-in-2026-a-practical-stack.html">Best AI Tools for Small Business in 2026: A Practical Stack</a></h3>
         <p>best AI tools for small business 2026</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>ED</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/best-free-ai-tools-for-students-study-faster-without-extra-apps.svg" alt="Education AI tools guide image" loading="lazy">
         <span>Education</span>
         <h3><a href="articles/best-free-ai-tools-for-students-study-faster-without-extra-apps.html">Best Free AI Tools for Students: Study Faster Without Extra Apps</a></h3>
         <p>best free AI tools for students</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>WR</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/best-ai-writing-tools-for-blog-posts-seo-friendly-options.svg" alt="Writing AI tools guide image" loading="lazy">
         <span>Writing</span>
         <h3><a href="articles/best-ai-writing-tools-for-blog-posts-seo-friendly-options.html">Best AI Writing Tools for Blog Posts: SEO-Friendly Options</a></h3>
         <p>best AI writing tools for blog posts</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>CR</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/ai-tools-for-youtube-creators-scripts-thumbnails-voice-and-clips.svg" alt="Creator AI tools guide image" loading="lazy">
         <span>Creator</span>
         <h3><a href="articles/ai-tools-for-youtube-creators-scripts-thumbnails-voice-and-clips.html">AI Tools for YouTube Creators: Scripts, Thumbnails, Voice, and Clips</a></h3>
         <p>AI tools for YouTube creators</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>CR</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/ai-tools-for-tiktok-content-creators-short-video-workflow.svg" alt="Creator AI tools guide image" loading="lazy">
         <span>Creator</span>
         <h3><a href="articles/ai-tools-for-tiktok-content-creators-short-video-workflow.html">AI Tools for TikTok Content Creators: Short Video Workflow</a></h3>
         <p>AI tools for TikTok content creators</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>BU</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/best-ai-tools-for-real-estate-agents-listings-leads-and-follow-up.svg" alt="Business AI tools guide image" loading="lazy">
         <span>Business</span>
         <h3><a href="articles/best-ai-tools-for-real-estate-agents-listings-leads-and-follow-up.html">Best AI Tools for Real Estate Agents: Listings, Leads, and Follow-Up</a></h3>
         <p>best AI tools for real estate agents</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>PR</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/ai-tools-for-lawyers-research-drafting-and-document-review.svg" alt="Professional AI tools guide image" loading="lazy">
         <span>Professional</span>
         <h3><a href="articles/ai-tools-for-lawyers-research-drafting-and-document-review.html">AI Tools for Lawyers: Research, Drafting, and Document Review</a></h3>
         <p>AI tools for lawyers</p>
       </article>
     
       <article class="article-card">
-        
-    <div class="article-visual" aria-hidden="true">
-      <div class="article-visual-panel">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <strong>PR</strong>
-    </div>
-  
+        <img class="article-image" src="assets/article-images/ai-tools-for-accountants-reporting-cleanup-and-client-communication.svg" alt="Professional AI tools guide image" loading="lazy">
         <span>Professional</span>
         <h3><a href="articles/ai-tools-for-accountants-reporting-cleanup-and-client-communication.html">AI Tools for Accountants: Reporting, Cleanup, and Client Communication</a></h3>
         <p>AI tools for accountants</p>
