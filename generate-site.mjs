@@ -301,6 +301,7 @@ function pageShell({ title, description, body, pathPrefix = "" }) {
 function renderTools() {
   return tools.map((tool, index) => `
     <article class="tool-card" data-tool-card data-category="${escapeHtml(tool.category)}" data-search="${escapeHtml(`${tool.name} ${tool.category} ${tool.description} ${tool.badge}`.toLowerCase())}">
+      ${renderToolVisual(tool)}
       <div class="tool-topline">
         <span class="tool-icon">${escapeHtml(tool.name.slice(0, 1))}</span>
         <span class="pill">${escapeHtml(tool.category)}</span>
@@ -315,6 +316,94 @@ function renderTools() {
     </article>
     ${index === 11 ? renderAdSlot("homepage") : ""}
   `).join("");
+}
+
+function renderToolVisual(tool) {
+  const palette = {
+    Chat: ["#0b0b0f", "#0071e3", "#d7e8ff"],
+    Search: ["#0b0b0f", "#36a269", "#dff5e8"],
+    Writing: ["#0b0b0f", "#9b72f2", "#eee7ff"],
+    Image: ["#0b0b0f", "#ff7a59", "#ffe8df"],
+    Video: ["#0b0b0f", "#ff375f", "#ffe5eb"],
+    Audio: ["#0b0b0f", "#30b0c7", "#def7fb"],
+    Coding: ["#0b0b0f", "#5856d6", "#e9e8ff"],
+    Productivity: ["#0b0b0f", "#007aff", "#e5f1ff"],
+    Automation: ["#0b0b0f", "#ff9f0a", "#fff1da"],
+    Design: ["#0b0b0f", "#bf5af2", "#f5e4ff"]
+  };
+  const [dark, accent, soft] = palette[tool.category] || palette.Chat;
+  return `
+    <div class="tool-visual" aria-hidden="true" style="--accent:${accent};--soft:${soft};--dark:${dark};">
+      <div class="visual-window">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="visual-orbit">
+        <i></i><i></i><i></i>
+      </div>
+    </div>
+  `;
+}
+
+function renderCategoryTiles() {
+  return categories.map((category) => `
+    <article class="category-tile">
+      ${renderCategoryVisual(category)}
+      <h3>${escapeHtml(category)}</h3>
+      <p>${escapeHtml(categorySummary(category))}</p>
+    </article>
+  `).join("");
+}
+
+function renderCategoryVisual(category) {
+  const symbols = {
+    Chat: "C",
+    Search: "S",
+    Writing: "W",
+    Image: "I",
+    Video: "V",
+    Audio: "A",
+    Coding: "</>",
+    Productivity: "P",
+    Automation: "Z",
+    Design: "D"
+  };
+  return `
+    <div class="category-visual" aria-hidden="true">
+      <span>${escapeHtml(symbols[category] || category.slice(0, 1))}</span>
+      <i></i>
+    </div>
+  `;
+}
+
+function categorySummary(category) {
+  const summaries = {
+    Chat: "General assistants and model hubs.",
+    Search: "Research engines with source checking.",
+    Writing: "Drafting, editing, and marketing copy.",
+    Image: "Images, mockups, and visual concepts.",
+    Video: "Clips, avatars, demos, and ads.",
+    Audio: "Voice, music, podcasts, and transcription.",
+    Coding: "Editors, copilots, APIs, and app builders.",
+    Productivity: "Notes, meetings, planning, and follow-up.",
+    Automation: "No-code flows and business agents.",
+    Design: "Slides, layouts, brands, and UI support."
+  };
+  return summaries[category] || "Tools for a focused workflow.";
+}
+
+function renderArticleVisual(category) {
+  return `
+    <div class="article-visual" aria-hidden="true">
+      <div class="article-visual-panel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <strong>${escapeHtml(category.slice(0, 2).toUpperCase())}</strong>
+    </div>
+  `;
 }
 
 function renderAdSlot(context = "default") {
@@ -333,6 +422,7 @@ function renderHome() {
     const slug = safeSlug(title);
     return `
       <article class="article-card">
+        ${renderArticleVisual(category)}
         <span>${escapeHtml(category)}</span>
         <h3><a href="articles/${slug}.html">${escapeHtml(title)}</a></h3>
         <p>${escapeHtml(keyword)}</p>
@@ -361,6 +451,7 @@ function renderHome() {
           <p class="eyebrow">Categories</p>
           <h2>Browse by workflow.</h2>
         </div>
+        <div class="category-grid">${renderCategoryTiles()}</div>
         <div class="filter-row" aria-label="Tool category filters">${categoryButtons}</div>
       </section>
 
@@ -404,6 +495,7 @@ function renderArticle(topic, index) {
           <p class="eyebrow">${escapeHtml(category)}</p>
           <h1>${escapeHtml(title)}</h1>
           <p class="lead">Keyword: ${escapeHtml(keyword)}. Updated ${now}. Estimated reading time: ${Math.max(4, Math.ceil(wordCount / 180))} minutes.</p>
+          ${renderArticleVisual(category)}
         </header>
         ${renderAdSlot("article")}
         <div class="article-body">${bodyContent}</div>
@@ -416,6 +508,7 @@ function renderArticle(topic, index) {
 function renderArticleIndex(articleMeta) {
   const cards = articleMeta.map((article) => `
     <article class="article-card" data-article-card data-search="${escapeHtml(`${article.title} ${article.keyword} ${article.category}`.toLowerCase())}">
+      ${renderArticleVisual(article.category)}
       <span>${escapeHtml(article.category)}</span>
       <h3><a href="${escapeHtml(article.slug)}.html">${escapeHtml(article.title)}</a></h3>
       <p>${escapeHtml(article.keyword)} - ${article.wordCount} words</p>
@@ -535,6 +628,43 @@ h3 { font-size: 1.18rem; font-weight: 700; }
 .section-heading.centered, .centered-hero { margin-inline: auto; text-align: center; }
 .section-heading p:not(.eyebrow) { color: var(--muted); font-size: 1.06rem; }
 .filter-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 28px;
+}
+.category-tile {
+  min-height: 172px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255,255,255,0.82);
+  box-shadow: 0 12px 38px rgba(0,0,0,0.04);
+}
+.category-tile h3 { margin-top: 14px; }
+.category-tile p { margin: 8px 0 0; color: var(--muted); font-size: 0.92rem; }
+.category-visual {
+  position: relative;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(145deg, #0b0b0f, #3a3a40);
+  overflow: hidden;
+}
+.category-visual span { position: relative; z-index: 1; font-weight: 800; font-size: 0.92rem; }
+.category-visual i {
+  position: absolute;
+  right: -14px;
+  bottom: -16px;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--blue);
+}
 .filter-button {
   min-height: 42px;
   border: 1px solid var(--line);
@@ -558,8 +688,55 @@ h3 { font-size: 1.18rem; font-weight: 700; }
   border-radius: 24px;
   box-shadow: 0 10px 36px rgba(0,0,0,0.04);
 }
-.tool-card { display: flex; min-height: 250px; flex-direction: column; padding: 20px; }
+.tool-card { display: flex; min-height: 314px; flex-direction: column; padding: 18px; overflow: hidden; }
 .tool-card[hidden], .article-card[hidden] { display: none; }
+.tool-visual {
+  position: relative;
+  height: 118px;
+  margin: -2px -2px 18px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, var(--soft), #fff 64%),
+    var(--soft);
+  overflow: hidden;
+}
+.visual-window {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  width: 122px;
+  height: 72px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.86);
+  box-shadow: 0 12px 38px rgba(0,0,0,0.08);
+}
+.visual-window span {
+  display: block;
+  height: 8px;
+  margin: 12px 16px;
+  border-radius: 999px;
+  background: #d9d9df;
+}
+.visual-window span:first-child { width: 66px; background: var(--dark); }
+.visual-window span:nth-child(2) { width: 88px; }
+.visual-window span:nth-child(3) { width: 44px; background: var(--accent); }
+.visual-orbit {
+  position: absolute;
+  right: 18px;
+  top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 32px);
+  gap: 10px;
+}
+.visual-orbit i {
+  width: 32px;
+  height: 32px;
+  border-radius: 12px;
+  background: var(--accent);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+.visual-orbit i:nth-child(2) { background: var(--dark); }
+.visual-orbit i:nth-child(3) { grid-column: 1 / -1; width: 74px; background: rgba(255,255,255,0.74); }
 .tool-topline { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
 .tool-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 12px; color: #fff; background: linear-gradient(145deg, #111, #555); font-weight: 800; }
 .pill { border-radius: 999px; padding: 6px 10px; color: var(--muted); background: var(--paper); font-size: 0.78rem; font-weight: 700; }
@@ -585,7 +762,8 @@ h3 { font-size: 1.18rem; font-weight: 700; }
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
-.article-card { padding: 20px; min-height: 190px; }
+.article-card { padding: 18px; min-height: 244px; overflow: hidden; }
+.article-card .article-visual { margin: -2px -2px 16px; }
 .article-card span { color: var(--blue); font-size: 0.78rem; font-weight: 750; text-transform: uppercase; }
 .article-card h3 { margin-top: 10px; }
 .article-card a { text-decoration: none; }
@@ -596,6 +774,50 @@ h3 { font-size: 1.18rem; font-weight: 700; }
 .article-page.slim { max-width: 860px; }
 .article-hero { max-width: 960px; padding: clamp(54px, 8vw, 96px) clamp(18px, 5vw, 72px) 28px; }
 .article-hero h1 { font-size: clamp(2.5rem, 5.6vw, 5.6rem); }
+.article-hero .article-visual {
+  max-width: 760px;
+  height: 190px;
+  margin-top: 30px;
+}
+.article-visual {
+  position: relative;
+  height: 112px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, #f5f5f7 0 46%, #ffffff 46% 100%);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.article-visual-panel {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  width: 54%;
+  max-width: 330px;
+  height: calc(100% - 44px);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.07);
+}
+.article-visual-panel span {
+  display: block;
+  height: 9px;
+  margin: 14px 18px;
+  border-radius: 999px;
+  background: #d9d9df;
+}
+.article-visual-panel span:first-child { width: 42%; background: #0b0b0f; }
+.article-visual-panel span:nth-child(2) { width: 68%; }
+.article-visual-panel span:nth-child(3) { width: 28%; background: var(--blue); }
+.article-visual strong {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+  color: var(--blue);
+  font-size: clamp(1.4rem, 3vw, 2.8rem);
+  font-weight: 780;
+  letter-spacing: 0;
+}
 .article-body { padding: clamp(22px, 4vw, 42px); }
 .article-body h2 { margin-top: 34px; font-size: clamp(1.5rem, 2.5vw, 2.2rem); }
 .article-body h3 { margin-top: 24px; }
@@ -611,14 +833,15 @@ h3 { font-size: 1.18rem; font-weight: 700; }
 }
 .site-footer p { max-width: 760px; margin: 0; }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 16px; }
-@media (max-width: 1100px) { .tool-grid, .article-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 1100px) { .tool-grid, .article-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .tool-grid, .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 620px) {
   .site-header, .site-footer { align-items: flex-start; flex-direction: column; }
-  .tool-grid, .article-grid { grid-template-columns: 1fr; }
+  .tool-grid, .article-grid, .category-grid { grid-template-columns: 1fr; }
   .hero-visual { border-radius: 18px; }
 }`;
 }
